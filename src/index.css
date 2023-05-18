@@ -1,13 +1,98 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url(https://fonts.googleapis.com/css?family=Cherry+Swash);
+
+* {
+  box-sizing: border-box;
+  /* setting box-sizing to border-box so that padding and border values are included in the total width and height of an element */
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  /* setting minimum height of the body element to 100vh so that it takes the full height of the viewport */
+  min-height: 100vh;
+  background-color: #4a628b;
+  background-image: url(https://images.unsplash.com/photo-1595981234058-a9302fb97229?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-size: cover;
+}
+
+.card {
+  width: 310px;
+  height: 300px;
+  padding: 10px;
+}
+
+.card-list {
+  width: 75%;
+  margin: auto;
+  /* setting margin to auto so that it is centered */
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  /* setting flex-wrap to wrap so that the elements inside it wrap to the next line if they don't fit on the current line */
+  justify-content: space-around;
+  /* setting justify-content to space-around so that the elements inside it are spaced evenly and have equal space around them */
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-search-input {
+  flex-grow: 1;
+
+  display: flex;
+  align-items: center;
+}
+
+.new-search-input form {
+  flex-grow: 1;
+}
+
+.new-search-input input {
+  width: 100%;
+  padding: 10px 0px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: hsl(234, 39%, 85%);
+  font-size: 18px;
+}
+
+.new-search-input input::placeholder {
+  color: hsl(233, 14%, 35%);
+}
+
+#search-bar {
+  width: 40%;
+  background-color: hsla(234, 14%, 29%, 0.308);
+  height: 60px;
+  margin-top: 50px;
+  border-radius: 20px;
+  display: flex;
+}
+
+#search-bar.fixed {
+  top: 0;
+  position: fixed;
+  margin-top: 1px;
+  z-index: 2;
+  width: 40%;
+  height: 40px;
+  background-color: transparent;
+  transition: all ease-in-out 0.25s;
+  border-radius: 15px;
 }
